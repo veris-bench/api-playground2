@@ -1,0 +1,13 @@
+name: Simple Dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: who
+        required: false
+        default: world
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello ${{ inputs.name }}"
